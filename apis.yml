@@ -1,10 +1,22 @@
 aid: adchem4f3e
-name: Adchem4f3e
-description: 'Adchem4f3e is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: ADChem Semi-Tech
+description: >-
+  Anhui ADChem Semi-Tech Co., Ltd. (安徽安德科铭半导体科技股份有限公司) is a Hefei, China
+  based manufacturer of electronic-grade semiconductor thin-film precursor materials, founded
+  in 2018 and operating an R&D base in Hefei with production sites in Tongling plus sales and
+  market-development offices in Shanghai and Wuhan. The company develops and produces
+  high-purity ALD and CVD precursors — silicon-based precursors (BDEAS, BTBAS, DIPAS, DIS),
+  High-K hafnium and zirconium precursors (TDMAHf, TEMAHf, CpHf, HfCl4, TEMAZ, CpZr, ZrCl4),
+  metal and conductive-film precursors (TMA, TBTDEN, WCl5, MoCl5, CCTBA, Ru(EtCp)2) and
+  perovskite photovoltaic precursors — alongside custom source canisters, liquid delivery
+  systems and thin-film process solutions for integrated-circuit manufacturing, advanced
+  display and new-energy customers. ADChem sells physical chemical products; it operates no
+  public developer program, API, or software platform.
+image: https://omo-oss-image1.thefastimg.com/portal-saas/pg2024072614393773562/cms/image/3c87a474-05c5-4098-8248-b6938a476638.jpg?vf=B7gH3s
 url: https://raw.githubusercontent.com/api-evangelist/adchem4f3e/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
+x-source-listing: https://equityzen.com/company/adchem4f3e
 x-tier: stub
 x-tier-reason: harvest
 specificationVersion: '0.20'
@@ -12,6 +24,15 @@ created: '2026-09-07'
 modified: '2026-09-07'
 tags:
 - Company
+- Semiconductors
+- Electronic Materials
+- Specialty Chemicals
+- Thin Film
+- ALD
+- CVD
+- Precursors
+- Manufacturing
+- China
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +40,40 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/adchem4f3e-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/adchem4f3e
+  url: https://www.adchem-tech.com/
+- type: About
+  url: https://www.adchem-tech.com/About.html
+- type: Blog
+  url: https://www.adchem-tech.com/news_list.html
+- type: Support
+  url: https://www.adchem-tech.com/contact.html
+- type: LLMsTxt
+  url: llms/adchem4f3e-llms.txt
+x-enrichment:
+  date: '2026-09-07'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Anhui ADChem Semi-Tech manufactures electronic-grade ALD/CVD precursor chemicals and source
+    canisters for chip fabs; its entire 136-URL corporate site is product, news and careers
+    pages with no developer section, and every OpenAPI, GraphQL, llms.txt and /.well-known/
+    probe against www.adchem-tech.com returned a 404 or a Tencent CDN 403 interstitial.
+  evidence:
+    - url: https://www.adchem-tech.com/
+      status: 200
+    - url: https://www.adchem-tech.com/sitemap.xml
+      status: 200
+    - url: https://www.adchem-tech.com/llms.txt
+      status: 404
+    - url: https://www.adchem-tech.com/.well-known/security.txt
+      status: 404
+    - url: https://www.adchem-tech.com/openapi.json
+      status: 403
+  checked: '2026-09-07'

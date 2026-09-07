@@ -1,4 +1,4 @@
-# Adchem4f3e
+# ADChem Semi-Tech
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,5 +64,17 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Adchem4f3e is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/adchem4f3e
+Anhui ADChem Semi-Tech Co., Ltd. (安徽安德科铭半导体科技股份有限公司) is a Hefei, China based
+manufacturer of electronic-grade semiconductor thin-film precursor materials for ALD and CVD
+deposition, founded in 2018. It produces high-purity silicon-based, High-K, metal/conductive-film
+and perovskite photovoltaic precursors, plus custom source canisters, liquid delivery systems and
+thin-film process solutions for integrated-circuit, advanced-display and new-energy customers.
+
+**No API surface.** ADChem sells physical chemical products and equipment. Contract discovery on
+2026-09-07 probed www.adchem-tech.com and the apex domain for OpenAPI, GraphQL, MCP, A2A, WSDL,
+gRPC, OGC, llms.txt and the /.well-known/ document set and found nothing published; no
+api./developer./docs. subdomain resolves and no first-party package exists on npm or PyPI. See
+`x-coverage` in apis.yml for the recorded evidence.
+
+- Company site: https://www.adchem-tech.com/
+- Surfaced via the API Evangelist harvest backlog (source: secondary-market): https://equityzen.com/company/adchem4f3e

@@ -1,0 +1,77 @@
+generated: '2026-09-07'
+method: probed
+source: >-
+  Live unauthenticated probes of the named /.well-known/ path list against every host this
+  record knows: the registrable domain adchem-tech.com and its www host. No API baseURL or
+  OpenAPI servers[] host exists for this provider — apis[] is empty and STEP 0b contract
+  discovery found no published contract.
+note: >-
+  NOTHING WAS SERVED. Every /.well-known/ path either 404s at the origin or is answered by the
+  Tencent Cloud CDN/WAF in front of www.adchem-tech.com with an HTML "403 Forbidden / 异常访问"
+  interstitial (title 异常访问, meta robots noindex, ~1.1KB) that is returned for any unusual
+  path — it is a bot-behavior block, not a document. Per the pipeline rule, no WellKnown or
+  SecurityTxt pointer is emitted: this file records a measured absence, not a presence. The
+  bare apex adchem-tech.com (A 123.59.154.172) does not complete a TLS connection at all;
+  those probes are recorded with status 0 (connection failure), which is an honest
+  observation, not a document.
+hosts:
+- host: www.adchem-tech.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+    note: origin 404 ("Sorry, the request URL was not found"), 36 bytes
+  - path: /.well-known/openid-configuration
+    status: 403
+    file: null
+    note: CDN/WAF HTML interstitial, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    file: null
+    note: CDN/WAF HTML interstitial, not a document
+  - path: /.well-known/oauth-protected-resource
+    status: 403
+    file: null
+    note: CDN/WAF HTML interstitial, not a document
+  - path: /.well-known/api-catalog
+    status: 403
+    file: null
+    note: CDN/WAF HTML interstitial, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    file: null
+    note: CDN/WAF HTML interstitial, not a document
+  - path: /.well-known/agent-card.json
+    status: 403
+    file: null
+    note: CDN/WAF HTML interstitial, not a document; no A2A agent card
+  - path: /.well-known/agent.json
+    status: 403
+    file: null
+    note: CDN/WAF HTML interstitial, not a document; no legacy A2A agent card
+  - path: /.well-known/aauth-resource.json
+    status: 403
+    file: null
+    note: CDN/WAF HTML interstitial, not a document
+- host: adchem-tech.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+    note: TLS connection to the apex times out; only the www host serves
+  - path: /.well-known/openid-configuration
+    status: 0
+    file: null
+    note: TLS connection to the apex times out
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+    note: TLS connection to the apex times out
+  - path: /.well-known/api-catalog
+    status: 0
+    file: null
+    note: TLS connection to the apex times out
+  - path: /.well-known/ai-plugin.json
+    status: 0
+    file: null
+    note: TLS connection to the apex times out
